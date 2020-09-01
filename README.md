@@ -82,5 +82,5 @@ Redux-saga
 4.	getStaticProps에서 API Request 예제 
 
 
-<img src="https://github.com/dev-palboksoft/nextjs-typescript-redux-saga/issues/1#issue-690106330" width="90%" />
+<img src="https://user-images.githubusercontent.com/54313551/91852006-213db680-ec9b-11ea-8934-4bd5fe0b6e4a.JPG" width="90%" />
 

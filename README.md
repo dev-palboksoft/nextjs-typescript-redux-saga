@@ -41,24 +41,36 @@ Redux-saga
 # Quick start
 
 // 패키지 설치 
-
+<pre>
+<code>
   npm install 
+</code>
+</pre>
 
 
 // eslint 
-
+<pre>
+<code>
   npm run lint 
+</code>
+</pre>
 
 
 // 개발 모드 실행
-
+<pre>
+<code>
   npm run dev 
+</code>
+</pre>
 
 
 // 빌드 후 실행
-
+<pre>
+<code>
   npm run build
-  npm run start 
+  npm run start
+</code>
+</pre>
 
 
 

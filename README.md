@@ -44,13 +44,16 @@ Redux-saga
 
   npm install 
 
+
 // eslint 
 
   npm run lint 
 
+
 // 개발 모드 실행
 
   npm run dev 
+
 
 // 빌드 후 실행
 

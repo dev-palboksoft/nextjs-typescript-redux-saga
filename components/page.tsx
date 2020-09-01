@@ -28,19 +28,19 @@ const Page: React.FC<PageProps> = ({ title }: PageProps) => {
     <div>
       <h1>{title}</h1>
       <div className={stylesExample.exampleBox}>
-        <h3># redux를 이용한 카운트 샘플</h3>
+        <h3># 1. Redux를 이용한 카운트 예제</h3>
         <Counter />
       </div>
       <div className={stylesExample.exampleBox}>
-        <h3># redux-saga delay 1 초 샘플</h3>
+        <h3># 2. Redux-saga delay를 이용한 무한 루프 예제</h3>
         <Clock lastUpdate={lastUpdate} light={light} />
       </div>
       <div className={stylesExample.exampleBox}>
-        <h3># API Requst 샘플</h3>
+        <h3># 3. API Request 예제</h3>
         <ApiCall />
       </div>
       <div className={stylesExample.exampleBox}>
-        <h3># getStaticProps 에서 API Requst 샘플</h3>
+        <h3># 4. getStaticProps에서 API Request 예제</h3>
         {placeholderData &&
           placeholderData.map((v, k) => {
             return <List key={`list-${k}`} data={v} />;

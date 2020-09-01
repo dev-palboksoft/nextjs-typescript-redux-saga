@@ -1,5 +1,5 @@
 # Next.js + typescript + redux-saga 조합의 샘플 입니다. ^^ 
--	김서진-
+##	- 김서진 (kim@palboksoft.com) -
 
 요즘 웹 개발 방법 중에 React + Typescript 조합으로 하는 프로젝트들의 점유율이 상당히 높은 것으로 알고 있습니다. 
 그런데 설치에서 부터 막히신 분들 많으시죠? 그 마음 다 이해합니다. 
@@ -22,18 +22,20 @@ Redux-saga
 -	비동기 처리를 쉽게 도와줍니다.
 
 # Quick start
+
 // 패키지 설치 
-npm install 
+  npm install 
 
 // eslint 
-npm run lint 
+  npm run lint 
 
 // 개발 모드 실행
-npm run dev 
+  npm run dev 
 
 // 빌드 후 실행
-npm run build
-npm run start 
+  npm run build
+  npm run start 
+
 
 # Example 
 

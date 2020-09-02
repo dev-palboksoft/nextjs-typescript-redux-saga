@@ -1,4 +1,4 @@
-import { all, call, delay, put, take, takeLatest, fork, takeEvery } from 'redux-saga/effects';
+import { all, call, put, fork, takeEvery } from 'redux-saga/effects';
 import axios, { AxiosResponse } from 'axios';
 
 import { actApiSuccess, actApiFail } from '../actions/actApiExample';

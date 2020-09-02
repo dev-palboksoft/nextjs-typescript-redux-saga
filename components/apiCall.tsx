@@ -37,9 +37,13 @@ const ApiCall = () => {
 
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={handleOnClick}>Api Request</Button>
+      <Button variant="contained" color="primary" onClick={handleOnClick}>
+        Api Request
+      </Button>
       &nbsp;&nbsp;
-      <Button variant="contained" color="secondary" onClick={handleOnClick2}>init Api Request</Button>
+      <Button variant="contained" color="secondary" onClick={handleOnClick2}>
+        init Api Request
+      </Button>
       <div>
         <pre>{apiResult !== null ? JSON.stringify(apiResult) : null}</pre>
       </div>

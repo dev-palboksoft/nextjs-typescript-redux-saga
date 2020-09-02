@@ -34,11 +34,17 @@ const Counter: React.FC = () => {
       <h1>
         Count: <span>{count}</span>
       </h1>
-      <Button variant="contained" color="primary" onClick={onIncrement}>+1</Button>
+      <Button variant="contained" color="primary" onClick={onIncrement}>
+        +1
+      </Button>
       &nbsp;
-      <Button variant="contained" color="secondary" onClick={onDecrement}>-1</Button>
+      <Button variant="contained" color="secondary" onClick={onDecrement}>
+        -1
+      </Button>
       &nbsp;
-      <Button variant="contained" color="default" onClick={onReset}>Reset</Button>
+      <Button variant="contained" color="default" onClick={onReset}>
+        Reset
+      </Button>
     </div>
   );
 };

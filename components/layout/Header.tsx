@@ -50,25 +50,39 @@ export default function DenseAppBar() {
       </AppBar>
 
       <Drawer anchor={'left'} open={isOpen} onClose={toggleDrawer}>
-        <div style={{width: 250}}>
+        <div
+          style={{
+            width: 250,
+          }}
+        >
           <List>
             <ListItem button key={1}>
-              <ListItemIcon><InboxIcon /></ListItemIcon>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
               <ListItemText>
-                <Link href='/'><a>Home</a></Link>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
               </ListItemText>
             </ListItem>
             <ListItem button key={2}>
-              <ListItemIcon><InboxIcon /></ListItemIcon>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
               <ListItemText>
-                <Link href='/other'><a>Other</a></Link>
+                <Link href="/other">
+                  <a>Other</a>
+                </Link>
               </ListItemText>
             </ListItem>
           </List>
           <Divider />
           <List>
             <ListItem button key={3}>
-              <ListItemIcon><MailIcon /></ListItemIcon>
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
               <ListItemText>Test</ListItemText>
             </ListItem>
           </List>

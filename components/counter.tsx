@@ -5,6 +5,8 @@ import { increment, decrement, reset } from '../actions/actExample';
 import { ExampleState } from '../interfaces';
 import { RootStateInterface } from '../interfaces/ifRootState';
 
+import Button from '@material-ui/core/Button';
+
 const Counter: React.FC = () => {
   //const count = useSelector((state: RootStateInterface): number => state.rdcExample.count);
   const { count } = useSelector((state: RootStateInterface): ExampleState => state.rdcExample);
@@ -32,9 +34,11 @@ const Counter: React.FC = () => {
       <h1>
         Count: <span>{count}</span>
       </h1>
-      <button onClick={onIncrement}>+1</button>
-      <button onClick={onDecrement}>-1</button>
-      <button onClick={onReset}>Reset</button>
+      <Button variant="contained" color="primary" onClick={onIncrement}>+1</Button>
+      &nbsp;
+      <Button variant="contained" color="secondary" onClick={onDecrement}>-1</Button>
+      &nbsp;
+      <Button variant="contained" color="default" onClick={onReset}>Reset</Button>
     </div>
   );
 };

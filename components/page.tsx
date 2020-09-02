@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
 
@@ -26,6 +27,16 @@ const Page: React.FC<PageProps> = ({ title }: PageProps) => {
 
   return (
     <div>
+      <div>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <span>&nbsp;|&nbsp;</span>
+        <Link href="/other">
+          <a>Other</a>
+        </Link>
+      </div>
+      <hr />
       <h1>{title}</h1>
       <div className={stylesExample.exampleBox}>
         <h3># 1. Redux를 이용한 카운트 예제</h3>

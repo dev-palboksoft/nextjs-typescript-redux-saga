@@ -1,4 +1,4 @@
-# Next.js + typescript + redux-saga 조합의 샘플 입니다. ^^ 
+# Next.js + typescript + redux-saga + material ui 조합의 샘플 입니다. ^^ 
 ##	- 김서진 (kim@palboksoft.com) -
 
 
@@ -36,6 +36,9 @@ Redux-saga
 
 -	비동기 처리를 쉽게 도와줍니다.
 
+material ui
+
+- ui 프레임워크 
 
 
 # Quick start

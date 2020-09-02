@@ -9,6 +9,8 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "axios": "^0.20.0",
     "immer": "^7.0.8",
     "next": "9.5.2",

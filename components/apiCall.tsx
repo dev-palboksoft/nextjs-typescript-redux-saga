@@ -4,6 +4,8 @@ import { actApiRequest, actApiInit, actApiSuccess, actApiFail } from '../actions
 import { ApiExampleState } from '../interfaces';
 import { RootStateInterface } from '../interfaces/ifRootState';
 
+import Button from '@material-ui/core/Button';
+
 const ApiCall = () => {
   const dispatch = useDispatch();
 
@@ -35,9 +37,9 @@ const ApiCall = () => {
 
   return (
     <div>
-      <button onClick={handleOnClick}>Api Request</button>
+      <Button variant="contained" color="primary" onClick={handleOnClick}>Api Request</Button>
       &nbsp;&nbsp;
-      <button onClick={handleOnClick2}>init Api Request</button>
+      <Button variant="contained" color="secondary" onClick={handleOnClick2}>init Api Request</Button>
       <div>
         <pre>{apiResult !== null ? JSON.stringify(apiResult) : null}</pre>
       </div>

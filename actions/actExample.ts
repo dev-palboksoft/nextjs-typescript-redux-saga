@@ -1,53 +1,53 @@
-import { User } from '../interfaces/ifExample/ifExample.interfaces';
+import { IUser } from '../interfaces/iExample/iExample.interfaces';
 import {
-  actionTypesExample,
-  Failure,
-  Increment,
-  Decrement,
-  Reset,
-  LoadData,
-  LoadDataSuccess,
-  StartClock,
-  TickClock,
-} from '../interfaces/ifExample/ifExampleAct.interfaces';
+  EActionTypesExample,
+  IFailure,
+  IIncrement,
+  IDecrement,
+  IReset,
+  ILoadData,
+  ILoadDataSuccess,
+  IStartClock,
+  ITickClock,
+} from '../interfaces/iExample/iExampleAct.interfaces';
 
-export function failure(error: Error): Failure {
+export function failure(error: Error): IFailure {
   return {
-    type: actionTypesExample.FAILURE,
+    type: EActionTypesExample.FAILURE,
     error,
   };
 }
 
-export function increment(): Increment {
-  return { type: actionTypesExample.INCREMENT };
+export function increment(): IIncrement {
+  return { type: EActionTypesExample.INCREMENT };
 }
 
-export function decrement(): Decrement {
-  return { type: actionTypesExample.DECREMENT };
+export function decrement(): IDecrement {
+  return { type: EActionTypesExample.DECREMENT };
 }
 
-export function reset(): Reset {
-  return { type: actionTypesExample.RESET };
+export function reset(): IReset {
+  return { type: EActionTypesExample.RESET };
 }
 
-export function loadData(): LoadData {
-  return { type: actionTypesExample.LOAD_DATA };
+export function loadData(): ILoadData {
+  return { type: EActionTypesExample.LOAD_DATA };
 }
 
-export function loadDataSuccess(data: User[]): LoadDataSuccess {
+export function loadDataSuccess(data: IUser[]): ILoadDataSuccess {
   return {
-    type: actionTypesExample.LOAD_DATA_SUCCESS,
+    type: EActionTypesExample.LOAD_DATA_SUCCESS,
     data,
   };
 }
 
-export function startClock(): StartClock {
-  return { type: actionTypesExample.START_CLOCK };
+export function startClock(): IStartClock {
+  return { type: EActionTypesExample.START_CLOCK };
 }
 
-export function tickClock(isServer: boolean): TickClock {
+export function tickClock(isServer: boolean): ITickClock {
   return {
-    type: actionTypesExample.TICK_CLOCK,
+    type: EActionTypesExample.TICK_CLOCK,
     light: !isServer,
     ts: Date.now(),
   };

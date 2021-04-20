@@ -1,8 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { NextApiRequest, NextApiResponse } from 'next';
-import { ApiResult } from '../../interfaces/ifApiExample/ifApiExample.interfaces';
+import { IApiResult } from '../../interfaces/iApiExample/iApiExample.interfaces';
 
-const Animals = (req: NextApiRequest, res: NextApiResponse<ApiResult[]>) => {
+const Animals = (req: NextApiRequest, res: NextApiResponse<IApiResult[]>) => {
   const data = [
     { id: 1, name: '고양이' },
     { id: 2, name: '강아지' },

@@ -1,35 +1,35 @@
-import { ApiResult } from '../interfaces/ifApiExample/ifApiExample.interfaces';
+import { IApiResult } from '../interfaces/iApiExample/iApiExample.interfaces';
 import {
-  actionTypesApiExample,
-  IfActApiInit,
-  IfActApiRequest,
-  IfActApiSuccess,
-  IfActApiFail,
-} from '../interfaces/ifApiExample/ifApiExampleAct.interfaces';
+  EActionTypesApiExample,
+  IActApiInit,
+  IActApiRequest,
+  IActApiSuccess,
+  IActApiFail,
+} from '../interfaces/iApiExample/iApiExampleAct.interfaces';
 
-export function actApiInit(): IfActApiInit {
+export function actApiInit(): IActApiInit {
   return {
-    type: actionTypesApiExample.API_INIT,
+    type: EActionTypesApiExample.API_INIT,
   };
 }
 
-export function actApiRequest(id: number): IfActApiRequest {
+export function actApiRequest(id: number): IActApiRequest {
   return {
-    type: actionTypesApiExample.API_REQUEST,
+    type: EActionTypesApiExample.API_REQUEST,
     id,
   };
 }
 
-export function actApiSuccess(data: ApiResult): IfActApiSuccess {
+export function actApiSuccess(data: IApiResult): IActApiSuccess {
   return {
-    type: actionTypesApiExample.API_SUCCESS,
+    type: EActionTypesApiExample.API_SUCCESS,
     data,
   };
 }
 
-export function actApiFail(error: Error): IfActApiFail {
+export function actApiFail(error: Error): IActApiFail {
   return {
-    type: actionTypesApiExample.API_FAIL,
+    type: EActionTypesApiExample.API_FAIL,
     error,
   };
 }

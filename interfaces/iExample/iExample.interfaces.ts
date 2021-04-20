@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
   id: number;
   name: string;
   username: string;
@@ -22,10 +22,10 @@ export interface User {
   };
 }
 
-export interface ExampleState {
+export interface IExampleState {
   count: number;
   error: null | Error;
   lastUpdate: number;
   light: boolean;
-  placeholderData: User[] | null;
+  placeholderData: IUser[] | null;
 }

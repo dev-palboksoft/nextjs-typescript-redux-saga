@@ -1,9 +1,13 @@
 // import produce from 'immer';
 // import { AnyAction } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
-import { ExampleState, ActionsExample, actionTypesExample } from '../interfaces';
+import { IExampleState } from '../interfaces/iExample/iExample.interfaces';
+import {
+  EActionTypesExample,
+  IActionsExample,
+} from '../interfaces/iExample/iExampleAct.interfaces';
 
-export const initialState: ExampleState = {
+export const initialState: IExampleState = {
   count: 0,
   error: null,
   lastUpdate: 0,
@@ -12,49 +16,49 @@ export const initialState: ExampleState = {
 };
 
 interface HydratePayload {
-  rdcExample: ExampleState;
+  rdcExample: IExampleState;
 }
 
 const rdcExample = (
   state = initialState,
   // action: AnyAction,
-  action: ActionsExample | { type: typeof HYDRATE; payload: HydratePayload },
-): ExampleState => {
+  action: IActionsExample | { type: typeof HYDRATE; payload: HydratePayload },
+): IExampleState => {
   switch (action.type) {
     case HYDRATE:
       return { ...state, ...action.payload.rdcExample };
 
-    case actionTypesExample.FAILURE:
+    case EActionTypesExample.FAILURE:
       return {
         ...state,
         ...{ error: action.error },
       };
 
-    case actionTypesExample.INCREMENT:
+    case EActionTypesExample.INCREMENT:
       return {
         ...state,
         ...{ count: state.count + 1 },
       };
 
-    case actionTypesExample.DECREMENT:
+    case EActionTypesExample.DECREMENT:
       return {
         ...state,
         ...{ count: state.count - 1 },
       };
 
-    case actionTypesExample.RESET:
+    case EActionTypesExample.RESET:
       return {
         ...state,
         ...{ count: initialState.count },
       };
 
-    case actionTypesExample.LOAD_DATA_SUCCESS:
+    case EActionTypesExample.LOAD_DATA_SUCCESS:
       return {
         ...state,
         ...{ placeholderData: action.data },
       };
 
-    case actionTypesExample.TICK_CLOCK:
+    case EActionTypesExample.TICK_CLOCK:
       return {
         ...state,
         ...{ lastUpdate: action.ts, light: !!action.light },

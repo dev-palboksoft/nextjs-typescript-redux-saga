@@ -3,12 +3,12 @@ import axios, { AxiosResponse } from 'axios';
 
 import { actApiSuccess, actApiFail } from '../actions/actApiExample';
 import {
-  actionTypesApiExample,
-  IfActApiRequest,
-} from '../interfaces/ifApiExample/ifApiExampleAct.interfaces';
-import { ApiResult } from '../interfaces/ifApiExample/ifApiExample.interfaces';
+  EActionTypesApiExample,
+  IActApiRequest,
+} from '../interfaces/iApiExample/iApiExampleAct.interfaces';
+import { IApiResult } from '../interfaces/iApiExample/iApiExample.interfaces';
 
-function* apiRequest(action: IfActApiRequest) {
+function* apiRequest(action: IActApiRequest) {
   try {
     const headers = { headers: { Authorization: 'bearer ' } };
     const id = action.id;
@@ -16,7 +16,7 @@ function* apiRequest(action: IfActApiRequest) {
     // formData.append('id', id);
     const params = { id: id };
 
-    const { status, data }: AxiosResponse<ApiResult> = yield call(
+    const { status, data }: AxiosResponse<IApiResult> = yield call(
       axios.post,
       '/api/animal',
       params,
@@ -32,7 +32,7 @@ function* apiRequest(action: IfActApiRequest) {
 }
 
 function* watchApiRequest() {
-  yield takeEvery(actionTypesApiExample.API_REQUEST, apiRequest);
+  yield takeEvery(EActionTypesApiExample.API_REQUEST, apiRequest);
 }
 
 function* sagaApiExample(): Generator {

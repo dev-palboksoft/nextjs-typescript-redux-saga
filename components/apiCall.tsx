@@ -1,14 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actApiRequest, actApiInit, actApiSuccess, actApiFail } from '../actions/actApiExample';
-import { ApiExampleState } from '../interfaces';
+import { IApiExampleState } from '../interfaces/iApiExample/iApiExample.interfaces';
 import { RootStateInterface } from '../interfaces/ifRootState';
 
 const ApiCall = () => {
   const dispatch = useDispatch();
 
   const { apiResult, error } = useSelector(
-    (state: RootStateInterface): ApiExampleState => state.rdcApiExample,
+    (state: RootStateInterface): IApiExampleState => state.rdcApiExample,
   );
 
   React.useEffect(() => {

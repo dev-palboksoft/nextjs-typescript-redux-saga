@@ -2,12 +2,13 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { increment, decrement, reset } from '../actions/actExample';
-import { ExampleState } from '../interfaces';
+import { IExampleState } from '../interfaces/iExample/iExample.interfaces';
+
 import { RootStateInterface } from '../interfaces/ifRootState';
 
 const Counter: React.FC = () => {
   //const count = useSelector((state: RootStateInterface): number => state.rdcExample.count);
-  const { count } = useSelector((state: RootStateInterface): ExampleState => state.rdcExample);
+  const { count } = useSelector((state: RootStateInterface): IExampleState => state.rdcExample);
   const dispatch = useDispatch();
 
   const onIncrement = (): void => {

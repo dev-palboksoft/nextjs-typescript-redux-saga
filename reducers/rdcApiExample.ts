@@ -1,34 +1,38 @@
 import { HYDRATE } from 'next-redux-wrapper';
-import { ApiExampleState, ActionsApiExample, actionTypesApiExample } from '../interfaces';
+import { IApiExampleState } from '../interfaces/iApiExample/iApiExample.interfaces';
+import {
+  EActionTypesApiExample,
+  IActionsApiExample,
+} from '../interfaces/iApiExample/iApiExampleAct.interfaces';
 
-export const initialState: ApiExampleState = {
+export const initialState: IApiExampleState = {
   apiResult: null,
   error: null,
 };
 
 interface HydratePayload {
-  rdcApiExample: ApiExampleState;
+  rdcApiExample: IApiExampleState;
 }
 
 const rdcApiExample = (
   state = initialState,
   // action: AnyAction,
-  action: ActionsApiExample | { type: typeof HYDRATE; payload: HydratePayload },
-): ApiExampleState => {
+  action: IActionsApiExample | { type: typeof HYDRATE; payload: HydratePayload },
+): IApiExampleState => {
   switch (action.type) {
     case HYDRATE:
       return { ...state, ...action.payload.rdcApiExample };
-    case actionTypesApiExample.API_SUCCESS:
+    case EActionTypesApiExample.API_SUCCESS:
       return {
         ...state,
         ...{ apiResult: action.data },
       };
-    case actionTypesApiExample.API_FAIL:
+    case EActionTypesApiExample.API_FAIL:
       return {
         ...state,
         ...{ error: action.error },
       };
-    case actionTypesApiExample.API_INIT:
+    case EActionTypesApiExample.API_INIT:
       return {
         ...state,
         ...{ error: initialState.error, apiResult: initialState.apiResult },

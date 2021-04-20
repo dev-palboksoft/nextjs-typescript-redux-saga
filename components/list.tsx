@@ -1,8 +1,8 @@
 import React from 'react';
-import { User } from '../interfaces/ifExample/ifExample.interfaces';
+import { IUser } from '../interfaces/iExample/iExample.interfaces';
 
 interface ListParams {
-  data: User;
+  data: IUser;
 }
 
 const List: React.FC<ListParams> = ({ data }: ListParams) => {
